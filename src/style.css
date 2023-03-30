@@ -1,0 +1,112 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  margin-top: 5%;
+  width: 40%;
+  background-color: #fff;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  height: 90%;
+  box-shadow: 0 0 5px rgba(5, 0, 0, 0.3);
+  backdrop-filter: blur(110px);
+  z-index: -1;
+}
+
+h3,
+li,
+#addInput {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 2% 3%;
+}
+
+.container h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(74, 74, 74);
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 .material-symbols-outlined {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.to-do-list li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#addInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#addInput:focus {
+  outline: none;
+}
+
+#addInput::placeholder {
+  font-style: italic;
+}
+
+.list-main {
+  display: flex;
+  gap: 10px;
+}
+
+.list-main h4 {
+  font-size: 15px;
+  font-weight: normal;
+  color: rgb(74, 74, 74);
+}
+
+.to-do-list .material-symbols-outlined {
+  margin-left: auto;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.removeBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  border: none;
+  padding: 4%;
+  color: rgba(0, 0, 0, 0.5);
+}
