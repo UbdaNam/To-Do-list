@@ -85,17 +85,25 @@ h3 .material-symbols-outlined {
 .list-main {
   display: flex;
   gap: 10px;
+  width: 100%;
 }
 
 .list-main h4 {
   font-size: 15px;
   font-weight: normal;
   color: rgb(74, 74, 74);
+  width: 100%;
 }
 
-.to-do-list .material-symbols-outlined {
+.list-main h4:focus {
+  outline: none;
+}
+
+.menuBtn {
   margin-left: auto;
   color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border: none;
   font-size: 20px;
   cursor: pointer;
 }
@@ -109,4 +117,8 @@ h3 .material-symbols-outlined {
   border: none;
   padding: 4%;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.bgLightYello {
+  background-color: #fffec4;
 }
