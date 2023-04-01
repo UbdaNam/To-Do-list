@@ -120,6 +120,10 @@ h3 .material-symbols-outlined {
   cursor: pointer;
 }
 
+.removeBtn:hover {
+  text-decoration: underline;
+}
+
 .bgLightYello {
   background-color: #fffec4;
 }
