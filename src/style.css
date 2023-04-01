@@ -117,8 +117,17 @@ h3 .material-symbols-outlined {
   border: none;
   padding: 4%;
   color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.removeBtn:hover {
+  text-decoration: underline;
 }
 
 .bgLightYello {
   background-color: #fffec4;
+}
+
+.cross-text {
+  text-decoration: line-through;
 }

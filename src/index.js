@@ -5,8 +5,11 @@ import addTask from './modules/addTask.js';
 import removeTask from './modules/removeTask.js';
 import updateIndex from './modules/updateIndex.js';
 import { editTask, updateTask } from './modules/editTask.js';
+import markCompleted from './modules/markCompleted.js';
+import deleteCompleted from './modules/deleteAllCompleted.js';
 
 const addInput = document.getElementById('addInput');
+const removeBtn = document.querySelector('.removeBtn');
 const toDoList = () => readLocalStorage() || [];
 showTasks(toDoList());
 // Add task
@@ -42,4 +45,17 @@ const param = (currentList, currentIndex, li) => {
     }
   });
 };
-export default param;
+// update status of completed tasks
+const checkCompleted = (currentList, index) => {
+  const updatedList = markCompleted(index, currentList);
+  setLocalStorage(updatedList);
+  showTasks(toDoList());
+};
+removeBtn.addEventListener('click', () => {
+  const newList = deleteCompleted(toDoList());
+  const data = updateIndex(newList);
+  setLocalStorage(data);
+  showTasks(toDoList());
+});
+
+export { param, checkCompleted };
