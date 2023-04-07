@@ -1,3 +1,5 @@
+import { setLocalStorage } from './localStorage.js';
+
 const addTask = (tasks, description) => {
   const task = {
     description,
@@ -5,6 +7,7 @@ const addTask = (tasks, description) => {
     index: tasks.length + 1,
   };
   tasks.push(task);
+  setLocalStorage(tasks);
 
   return tasks;
 };
