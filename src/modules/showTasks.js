@@ -1,5 +1,6 @@
 import { param, checkCompleted } from '../index.js';
 import renderList from './renderList.js';
+
 const passParam = (li, toDoList, index) => {
   param(toDoList, index, li);
 };

@@ -1,7 +1,7 @@
 const renderList = (item, ulEle) => {
   const li = document.createElement('li');
-    li.setAttribute('id', `id${item.index}`);
-    li.innerHTML = `
+  li.setAttribute('id', `id${item.index}`);
+  li.innerHTML = `
     <div class="list-main">
       <input type="checkbox" ${item.completed === true ? 'checked' : ''} name="check" id="checkInput">
       <h4 class=${item.completed === true ? 'cross-text' : ''}>${item.description}</h4>
@@ -12,9 +12,9 @@ const renderList = (item, ulEle) => {
     </span>
     </button>
     `;
-    ulEle.appendChild(li);
+  ulEle.appendChild(li);
 
-    return li;
-}
+  return li;
+};
 
 export default renderList;

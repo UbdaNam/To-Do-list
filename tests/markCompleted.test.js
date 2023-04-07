@@ -1,7 +1,6 @@
-import markCompleted from "../src/modules/markCompleted";
+import markCompleted from '../src/modules/markCompleted.js';
 
 describe('Unit tests for update task status function', () => {
-
   test('Change status of task 2 to completed', () => {
     const currentTaskList = [
       {

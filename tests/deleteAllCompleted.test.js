@@ -1,7 +1,6 @@
-import deleteCompleted from "../src/modules/deleteAllCompleted";
+import deleteCompleted from '../src/modules/deleteAllCompleted.js';
 
 describe('Unit tests for delete all completed function', () => {
-
   test('Delete all completed task with a list containing 1 task which is completed', () => {
     const currentTaskList = [
       {
@@ -56,7 +55,7 @@ describe('Unit tests for delete all completed function', () => {
         description: 'Task 4',
         completed: false,
         index: 4,
-      }
+      },
     );
   });
 });

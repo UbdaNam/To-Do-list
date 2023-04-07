@@ -1,7 +1,6 @@
-import { updateTask } from "../src/modules/editTask";
+import { updateTask } from '../src/modules/editTask.js';
 
 describe('Unit tests for update task description function', () => {
-
   test('Update task 1 description', () => {
     const currentTaskList = [
       {
@@ -11,7 +10,7 @@ describe('Unit tests for update task description function', () => {
       },
     ];
     const index = 1;
-    const description = "Updated description";
+    const description = 'Updated description';
     const newTask = {
       description: 'Updated description',
       completed: true,
@@ -39,10 +38,10 @@ describe('Unit tests for update task description function', () => {
         description: 'Task 3',
         completed: false,
         index: 3,
-      }
+      },
     ];
     const index = 2;
-    const description = "Updated description";
+    const description = 'Updated description';
     const newTask = {
       description: 'Updated description',
       completed: false,
@@ -53,5 +52,4 @@ describe('Unit tests for update task description function', () => {
 
     expect(newTaskList).toContainEqual(newTask);
   });
-
 });
