@@ -1,5 +1,3 @@
-/** @format */
-
 import removeTask from '../src/modules/removeTask.js';
 
 describe('Unit tests for remove task function', () => {
@@ -46,7 +44,7 @@ describe('Unit tests for remove task function', () => {
       index: 2,
     });
   });
-  
+
   test('remove the first task form the task list', () => {
     const anotherTaskList = [
       {
