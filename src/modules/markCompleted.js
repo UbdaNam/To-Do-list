@@ -1,7 +1,7 @@
 const updateTasks = (index, taskList) => {
-  taskList.forEach((item) => {
-    if (item.index === index) {
-      item.completed = !item.completed;
+  taskList.forEach((task) => {
+    if (task.index === index) {
+      task.completed = !task.completed;
     }
   });
 
