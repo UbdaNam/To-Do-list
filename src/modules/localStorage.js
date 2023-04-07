@@ -1,11 +1,9 @@
 const setLocalStorage = (tasks) => {
-  const data = JSON.stringify(tasks);
-  localStorage.setItem('taskList', data);
+  localStorage.setItem('taskList', JSON.stringify(tasks));
 };
 
 const readLocalStorage = () => {
-  const data = localStorage.getItem('taskList');
-  const tasks = JSON.parse(data);
+  const tasks = JSON.parse(localStorage.getItem('taskList'));
 
   return tasks;
 };
