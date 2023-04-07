@@ -46,4 +46,28 @@ describe('Unit tests for remove task function', () => {
       index: 2,
     });
   });
+  
+  test('remove the first task form the task list', () => {
+    const anotherTaskList = [
+      {
+        description: 'Task 1',
+        completed: true,
+        index: 1,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 2,
+      },
+    ];
+    const index = 1;
+
+    const tasklist = removeTask(anotherTaskList, index);
+
+    expect(tasklist).not.toContainEqual({
+      description: 'Task 2',
+      completed: true,
+      index: 1,
+    });
+  });
 });
