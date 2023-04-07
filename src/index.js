@@ -15,8 +15,7 @@ showTasks(toDoList());
 // Add task
 addInput.addEventListener('keyup', ({ key }) => {
   if (key === 'Enter') {
-    const newList = addTask(toDoList(), addInput.value);
-    setLocalStorage(newList);
+    addTask(toDoList(), addInput.value);
     showTasks(toDoList());
     addInput.value = '';
   }
@@ -24,12 +23,12 @@ addInput.addEventListener('keyup', ({ key }) => {
 // Edit task
 const param = (currentList, currentIndex, li) => {
   const obj = editTask(li);
-  const { deleteIcon, descriptionEle: description } = obj;
+  const description = obj.descriptionEle;
+  const { deleteIcon } = obj;
 
   // Delete Task
   deleteIcon.addEventListener('click', () => {
-    const newList = removeTask(currentList, currentIndex);
-    setLocalStorage(newList);
+    removeTask(currentList, currentIndex);
     showTasks(toDoList());
     const data = updateIndex(toDoList());
     setLocalStorage(data);
